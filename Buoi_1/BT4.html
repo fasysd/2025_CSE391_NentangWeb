@@ -13,9 +13,107 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+        <form action="">
+            <label for="">
+                <h2>Basic Info</h2>
+            </label>
+            <div class="infoBox">
+                <div class="line">
+                    <label for="" class="line_name">EmployeeID</label>
+                    <input type="number" name="" id="" class="line_data" required>
+                </div>
+                <div class="line">
+                    <label for="" class="line_name">Last Name</label>
+                    <input type="text" name="" id="" class="line_data" required>
+                </div>
+                <div class="line">
+                    <label for="" class="line_name">First Name</label>
+                    <input type="text" name="" id="" class="line_data" required>
+                </div>
+                <div class="line">
+                    <label for="" class="line_name">Gender</label>
+                    <div class="line_data">
+                        <input type="radio" name="line_Gender" id="" value="Male" required> <label for="">Male</label>
+                        <br>
+                        <input type="radio" name="line_Gender" id="" value="Female" required> <label for="">Female</label>
+                        <br>
+                        <input type="radio" name="line_Gender" id="" value="XXX" required> <label for="">XXX</label>
+                    </div>
+                </div>
+                <div class="line">
+                    <label for="" class="line_name">Title</label>
+                    <input type="text" name="" id="" class="line_data" required>
+                </div>
+                <div class="line">
+                    <label for="" class="line_name">Suffix</label>
+                    <input type="text" name="" id="" class="line_data" required>
+                </div>
+                <div class="line">
+                    <label for="" class="line_name">BirthDate</label>
+                    <input type="date" name="" id="" class="line_data" required>
+                </div>
+                <div class="line">
+                    <label for="" class="line_name">HireDate</label>
+                    <input type="date" name="" id="" class="line_data" required>
+                </div>
+                <div class="line">
+                    <label for="" class="line_name">SNN # (if applicable)</label>
+                    <input type="text" name="SNN" id="SNN" class="line_data">
+                </div>
+                <div class="line">
+                    <label for="" class="line_name">Resports To</label>
+                    <select name="Resports To" id="Resports To" class="line_data">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                
+            </div>
+            <label for="">
+                <h2>Contact Infor</h2>
+            </label>
+            <div class="infoBox">
+                <div class="line">
+                    <label for="" class="line_name">Email</label>
+                    <input type="email" name="Email" id="Email" class="line_data" required>
+                </div>
+                <div class="line">
+                    <label for="" class="line_name">Address</label>
+                    <input type="text" name="Address" id="Address" class="line_data" required>
+                </div>
+                <div class="line">
+                    <label for="" class="line_name">City</label>
+                    <input type="text" name="City" id="City" class="line_data" required>
+                </div>
+                <div class="line">
+                    <label for="" class="line_name">Region</label>
+                    <input type="Text" name="Region" id="Region" class="line_data" required>
+                </div>
+                <div class="line">
+                    <label for="" class="line_name">Postal Code</label>
+                    <input type="text" name="Postal Code" id="Postal Code" class="line_data" required>
+                </div>
+                <div class="line">
+                    <label for="" class="line_name">Country</label>
+                    <select name="Country" id="Country" class="line_data">
+                        <option value="Vietnam">Vietnam</option>
+                        <option value="Thai">Thai</option>
+                        <option value="China">China</option>
+                    </select>
+                </div>
+                <div class="line">
+                    <label for="" class="line_name">US Home Phone</label>
+                    <input type="number" name="US Home Phone" id="US Home Phone" class="line_data" required>
+                </div>
+                <div class="line">
+                    <label for="" class="line_name">Photo</label>
+                    <input type="image" name="photo" id="photo" class="line_data" required>
+                </div>
+            </div>
+        </form>
         
         <script src="" async defer></script>
     </body>
