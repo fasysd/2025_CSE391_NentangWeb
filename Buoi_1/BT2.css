@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    border: 0;
+    margin: 0;
+    display: block;
+}
+
+h1 {
+    color: red;
+}
+.listCourse {
+    display: flex;
+}
+
+.course {
+    display: inline-grid;
+    border: 1px solid black;
+    padding: 20px;
+}
+.course_name{
+    margin: 10px 0 10px 0;
+}
+.course_img {
+    width: 200px;
+}
+
+.course_information {
+    list-style: none;
+}
+.course_information_item{
+    display: flex;
+    margin-top: 10px;
+}
+.course_information_icon{
+    width: 18px;
+}
