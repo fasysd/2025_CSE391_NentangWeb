@@ -9,13 +9,16 @@ h1 {
     color: red;
 }
 .listCourse {
-    display: flex;
+    /* display: flex; */
 }
 
 .course {
     display: inline-grid;
     border: 1px solid black;
     padding: 20px;
+    margin: 20px 0px 0px 20px;
+    width: 200px;
+    height: 350px;
 }
 .course_name{
     margin: 10px 0 10px 0;
@@ -33,4 +36,5 @@ h1 {
 }
 .course_information_icon{
     width: 18px;
+    margin-right: 10px;
 }
