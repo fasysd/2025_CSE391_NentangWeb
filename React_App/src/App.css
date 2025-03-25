@@ -11,7 +11,6 @@
   background-color: rgba(79, 1, 1, 0.141);
   width: 100vw;
   height: 100vh;
-
 }
 
 .ScoreBoard {
@@ -21,16 +20,6 @@
 }
 
 .GameMenu {
-  padding: 0;
-  border: 0;
-  margin: 0;
-  width: 500px;
-  height: 500px;
-  display: flex;
-  flex-direction: column;
-  list-style-type: none;
-}
-.Form {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -40,7 +29,7 @@
   transform: translate(-50%, -50%);
   width: 400px;
 }
-.FormInput {
+.Form {
   display: flex;
   flex-direction: column;
   background-color: rgba(135, 144, 144, 0.282);
@@ -54,6 +43,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
 }
 
 .GameBoard {

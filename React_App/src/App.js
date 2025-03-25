@@ -7,10 +7,10 @@ import { useEffect, useState } from 'react';
 import ScoreBoard from './_components/ScoreBoard';
 
 function App() {
-  const [_cards, _setCards] = useState( null);
-  const [_card1, _setCard1] = useState( null);
-  const [_card2, _setCard2] = useState( null);
-  const [_data, _setData] = useState({
+  const [_cards, _setCards] = useState( null);//Lưu trạng thái của các thẻ bài
+  const [_card1, _setCard1] = useState( null);//Bài ngửa số một
+  const [_card2, _setCard2] = useState( null);//Bài ngửa số một
+  const [_data, _setData] = useState({//Dữ liệu từ người chơi
       name: "Chưa có tên",
       score: 0,
       level: 1,
@@ -18,13 +18,14 @@ function App() {
       color: "red",
   });
 
+  //Dùng chuyển đổi giữa các Route mà không phải dùng tag <Link/>
   const navigate = useNavigate();
 
-  useEffect(() => {
-    if (_card1 && _card2) {
+  useEffect(() => {//Kiểm tra bài mỗi khi chọn được 2 lá
+    if (_card1 && _card2) {//DK chọn 2 lá
       setTimeout(_checkCards, 500);
     }
-  }, [_card1, _card2]);
+  }, [_card1, _card2]);//DK _card1, _card2 thay đổi ( tránh render nhiều lần)
 
   function _startGame(newData) {
     //Đặt lại dữ liệu
@@ -45,6 +46,7 @@ function App() {
       [listType[i], listType[j]] = [listType[j], listType[i]];
     }
 
+    //Tạo danh sách thẻ
     const newListCards = listType.map((type, index) => ({
       id: index,
       type,
@@ -53,12 +55,12 @@ function App() {
     }));
 
     _setCards(newListCards);
-    navigate("/GameBoard");
+    navigate("/GameBoard");//Chuyển sang Route GameBoard để bắt đầu chơi
   }
 
   function _endGame(){
     setTimeout(() => {
-      navigate( "/");
+      navigate( "/");//Chuyển sang Route GameMenu
     }, 500);
   };
   //Lật thẻ dược chọn
@@ -103,16 +105,12 @@ function App() {
         if (newScore === _cards.length) _endGame();
         return { ...prevData, score: newScore };
       });
-    } else {
-      setTimeout(() => {
-        _downAllCard();
-      }, 200);
+    } else { //Thẻ sai
+      _downAllCard();
     }
     _setCard1(null);
     _setCard2(null);
   }
-
-  const _link_menu = ( a) => <Link to="/">{a}</Link>;
 
   return (
     <div className="App">
@@ -120,7 +118,7 @@ function App() {
         <Route path='/' element={<GameMenu Data={_data} StartGame={ _startGame}></GameMenu>}></Route>
         <Route path='/GameBoard' element={<>
           <ScoreBoard Data={_data}/>
-          <GameBoard Cards={_cards} Data={_data} UpCard={_upCard} MenuPage={_link_menu} />
+          <GameBoard Cards={_cards} Data={_data} UpCard={_upCard}/>
         </>}></Route>
       </Routes>
     </div>

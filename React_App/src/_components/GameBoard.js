@@ -14,13 +14,13 @@ function GameBoard({ Cards, UpCard, Data}) {
 
   return (
     <>
-        <ul className='GameBoard' style={{ "--widthCard": String(100/getOptimalWidth( Cards.length)) + "%" }}>
-          { Cards ? Cards.map( card => (
+        { Cards ? <ul className='GameBoard' style={{ "--widthCard": String(100/getOptimalWidth( Cards.length)) + "%" }}>
+          { Cards.map( card => (
             <li className='Card' key={card.id}>
               <Card Card={ card} UpCard={UpCard} ColorCard={Data.colorCard} Color={Data.color}></Card>
             </li>
-          )) : (<></>)}
-        </ul>
+          ))}
+        </ul> : <>Game lỗi!!!!!!!</>}
         <button onClick={ () => navigate("/")}>Menu</button>
     </>
   ); 
