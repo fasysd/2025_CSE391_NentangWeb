@@ -1,0 +1,138 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(79, 1, 1, 0.141);
+  width: 100vw;
+  height: 100vh;
+
+}
+
+.ScoreBoard {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.GameMenu {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}
+.Form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+}
+.FormInput {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(135, 144, 144, 0.282);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 20px;
+  text-align: left;
+}
+.FormData {
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.GameBoard {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.Card {
+  width: var(--widthCard);
+  height: var(--widthCard);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Card button {
+  width: 80%;
+  height: 80%;
+}
+
+.card {
+  width: 80px;
+  height: 100px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.card:not(.flipped):hover .card-inner {
+  transform: scale(1.25);
+  transition: transform 0.1s ease-in-out;
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Mặt trước & sau */
+.card-front, .card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+/* Mặt trước (hiện số/thẻ) */
+.card-front {
+  background: white;
+  border: 2px solid var(--colorCard);
+  transform: rotateY(180deg);
+}
+
+
+/* Mặt sau (chưa lật) */
+.card-back {
+  background: var(--colorCard);
+  color: white;
+  color: var(--color);
+  font-size: 50px;
+}
